@@ -40,7 +40,6 @@ const errorHandler = (err, req, res, next) => {
         default:
             console.log("No error!");
     }
-
 };
 
 module.exports = errorHandler
