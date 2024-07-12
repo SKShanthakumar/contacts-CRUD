@@ -4,7 +4,7 @@ const dotenv = require("dotenv").config();
 
 const connectDb = asyncHandler(async () => {
     const connect = await mongoose.connect(process.env.CONNECTION_STRING);
-    console.log(connect.connection.host);
+    console.log("database connected: ",connect.connection.host);
 });
 
 module.exports = connectDb;
