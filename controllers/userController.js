@@ -22,6 +22,7 @@ const registerUser = asyncHandler(async (req, res) => {
     //hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
+    // When you write username and email directly inside the object, it's using object property shorthand, assumes the key and the value are the same.
     const user = await User.create({
         username,
         email,
